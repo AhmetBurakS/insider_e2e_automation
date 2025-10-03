@@ -17,4 +17,15 @@ public class HomePage {
 
     @FindBy(xpath = "//a[text()='Careers']")
     public WebElement Careers;
+
+    // Navigation menu
+    @FindBy(xpath = "//nav[contains(@class, 'navbar')]")
+    public WebElement navigationBar;
+
+    // Page load verification
+    @FindBy(xpath = "//body")
+    public WebElement pageBody;
+
+    @FindBy(xpath = "//a[normalize-space(text())='Company']")
+    public WebElement companyDropdownMenu;
 }

@@ -51,7 +51,7 @@ public class Driver {
 
     public static void closeDriver(){
         if (driver != null){
-            driver.quit(); // Tarayıcıyı tamamen kapatma
+            driver.quit();
             driver = null;
         }
     }

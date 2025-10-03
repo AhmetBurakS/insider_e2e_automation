@@ -211,4 +211,13 @@ public class ReusableMethods {
             // Popup not present or already accepted; ignore
         }
     }
+
+    public static void verifyLocationsSectionAfterClicks(WebElement rightArrowElement, WebElement locationsElement, int clickCount) {
+        // Belirtilen sayıda sağ oka tıkla
+        for (int i = 0; i < clickCount; i++) {
+            ReusableMethods.clickWithJS(rightArrowElement);
+            ReusableMethods.wait(1); // Her tıklama arasında kısa bekleme
+        }
+
+    }
 }
