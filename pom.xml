@@ -77,12 +77,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <includes>
-                        <include>**/*Tests.java</include>
-                    </includes>
-                    <testSourceDirectory>src/test/java</testSourceDirectory>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/java/runner/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

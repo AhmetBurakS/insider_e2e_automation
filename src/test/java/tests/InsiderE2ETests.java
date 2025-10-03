@@ -102,6 +102,10 @@ public class InsiderE2ETests {
 
         //Filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance'
         ReusableMethods.waitForVisibility(allOpenPositionsPage.filterByLocationDropdownMenu, 10);
+
+        ReusableMethods.performAction(allOpenPositionsPage.filterByLocationDropdownMenu, "hover");
+        ReusableMethods.performAction(allOpenPositionsPage.filterByLocationDropdownMenu, "doubleClick");
+
         ReusableMethods.clickWithJS(allOpenPositionsPage.filterByLocationDropdownMenu);
         ReusableMethods.wait(3);
 
@@ -134,12 +138,39 @@ public class InsiderE2ETests {
     @Test(description = "Test Case 4: Check that all jobs' Position contains 'Quality Assurance', Department contains 'Quality Assurance', and Location contains 'Istanbul, Turkey'")
     public void test04_VerifyJobDetails() {
 
+        Driver.getDriver().get(ConfigReader.getProperty("URL2"));
+        ReusableMethods.waitForPageToLoad(10);
+        ReusableMethods.waitForVisibility(allOpenPositionsPage.jobCard, 20);
+        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
 
+        // Position kontrolü
+        String positionText = allOpenPositionsPage.position.getText();
+        assert positionText.contains("Quality Assurance") : "Position does not contain 'Quality Assurance'. Actual: " + positionText;
+
+        // Department kontrolü
+        String departmentText = allOpenPositionsPage.department.getText();
+        assert departmentText.contains("Quality Assurance") : "Department does not contain 'Quality Assurance'. Actual: " + departmentText;
+
+        // Location kontrolü
+        String locationText = allOpenPositionsPage.location.getText();
+        assert locationText.contains("Istanbul, Turkey") : "Location does not contain 'Istanbul, Turkey'. Actual: " + locationText;
+
+        System.out.println("✓ Test 4 PASSED: All job details verified successfully");
     }
 
     @Test(description = "Test Case 5: Click the 'View Role' button and check that this action redirects us to the Lever Application form page")
     public void test05_VerifyLeverApplicationRedirect() {
 
+        Driver.getDriver().get(ConfigReader.getProperty("URL2"));
+        ReusableMethods.waitForPageToLoad(10);
+        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.waitForClickability(allOpenPositionsPage.viewRoleButton, 10);
+        allOpenPositionsPage.viewRoleButton.click();
+        ReusableMethods.waitForPageToLoad(10);
+        ReusableMethods.assertPageURL("https://jobs.lever.co/useinsider/");
+        ReusableMethods.assertElementDisplayed(leverApplicationFormPage.applyForThisJobButton, "Application Form");
+        System.out.println("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
 
     }
 

@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>TestNG:  InsiderE2ETests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>InsiderE2ETests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 03 15:12:38 GMT+03:00 2025</td>
+</tr>
+<tr><td>Total time:</td><td>35 seconds (35259 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.InsiderE2ETests.test03_VerifyQAJobsFiltering()'><b>test03_VerifyQAJobsFiltering</b><br>Test class: tests.InsiderE2ETests<br>Test method: Test Case 3: Go to https://useinsider.com/careers/quality-assurance/, click 'See all QA jobs', filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance', check the presence of the jobs list</td>
+<td></td>
+<td>12</td>
+<td>tests.InsiderE2ETests@3246fb96</td></tr>
+<tr>
+<td title='tests.InsiderE2ETests.test01_VerifyInsiderHomePageOpened()'><b>test01_VerifyInsiderHomePageOpened</b><br>Test class: tests.InsiderE2ETests<br>Test method: Test Case 1: Visit https://useinsider.com/ and check Insider home page is opened or not</td>
+<td></td>
+<td>0</td>
+<td>tests.InsiderE2ETests@3246fb96</td></tr>
+<tr>
+<td title='tests.InsiderE2ETests.test04_VerifyJobDetails()'><b>test04_VerifyJobDetails</b><br>Test class: tests.InsiderE2ETests<br>Test method: Test Case 4: Check that all jobs' Position contains 'Quality Assurance', Department contains 'Quality Assurance', and Location contains 'Istanbul, Turkey'</td>
+<td></td>
+<td>0</td>
+<td>tests.InsiderE2ETests@3246fb96</td></tr>
+<tr>
+<td title='tests.InsiderE2ETests.test05_VerifyLeverApplicationRedirect()'><b>test05_VerifyLeverApplicationRedirect</b><br>Test class: tests.InsiderE2ETests<br>Test method: Test Case 5: Click the 'View Role' button and check that this action redirects us to the Lever Application form page</td>
+<td></td>
+<td>0</td>
+<td>tests.InsiderE2ETests@3246fb96</td></tr>
+<tr>
+<td title='tests.InsiderE2ETests.test02_VerifyCareersPageAndSections()'><b>test02_VerifyCareersPageAndSections</b><br>Test class: tests.InsiderE2ETests<br>Test method: Test Case 2: Select the 'Company' menu in the navigation bar, select 'Careers' and check Career page, its Locations, Teams, and Life at Insider blocks are open or not</td>
+<td></td>
+<td>4</td>
+<td>tests.InsiderE2ETests@3246fb96</td></tr>
+</table><p>
+</body>
+</html>

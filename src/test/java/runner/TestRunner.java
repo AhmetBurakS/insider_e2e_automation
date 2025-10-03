@@ -11,9 +11,8 @@ public class TestRunner {
 
         TestNG testng = new TestNG();
         List<String> suites = new ArrayList<>();
-        suites.add("testNG.xml");
+        suites.add("src/test/java/runner/testng.xml");
         testng.setTestSuites(suites);
         testng.run();
     }
 }
-

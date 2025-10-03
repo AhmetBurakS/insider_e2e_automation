@@ -27,7 +27,7 @@ public class AllOpenPositionsPage {
     @FindBy(xpath = "//li[text()='Quality Assurance']")
     public WebElement qualityAssurance;
 
-    @FindBy(xpath = ".//p[contains(@class, 'position-title')]")
+    @FindBy(xpath = "(.//p[contains(@class, 'position-title')])[2]")
     public WebElement jobCard;
 
     @FindBy(xpath = ".//p[contains(@class, 'position-title')]")
@@ -39,6 +39,6 @@ public class AllOpenPositionsPage {
     @FindBy(xpath = ".//div[contains(@class, 'position-location')]")
     public WebElement location;
 
-    @FindBy(xpath = "//a[text()='View Role']")
+    @FindBy(xpath = "(//div[contains(@class, 'position-list-item')]//a[text()='View Role'])[1]")
     public WebElement viewRoleButton;
 }
