@@ -47,7 +47,6 @@ public class InsiderE2ETests {
 
         // Verify Company dropdown menu is present
         ReusableMethods.assertElementDisplayed(homePage.companyDropdownMenu, "Company Dropdown Menu");
-
         System.out.println("✓ Test 1 PASSED: Insider home page is successfully opened and verified");
     }
 
@@ -78,7 +77,6 @@ public class InsiderE2ETests {
         // Verify Life at Insider block is displayed
         ReusableMethods.scrollToElement(careersPage.lifeAtInsiderSection);
         ReusableMethods.assertElementDisplayed(careersPage.lifeAtInsiderSection, "Life at Insider Section");
-
         System.out.println("✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified");
     }
 
@@ -96,42 +94,27 @@ public class InsiderE2ETests {
         // Click "See all QA jobs" button
         qualityAssurancePage.seeAllQAJobsButton.click();
         ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.assertPageURL("https://useinsider.com/careers/open-positions/?department=qualityassurance");
+        ReusableMethods.assertPageURL(ConfigReader.getProperty("URL2"));
         ReusableMethods.assertPageTitle("Insider Open Positions | Insider");
         System.out.println("✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified");
 
         //Filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance'
-        ReusableMethods.waitForVisibility(allOpenPositionsPage.filterByLocationDropdownMenu, 10);
-
-        ReusableMethods.performAction(allOpenPositionsPage.filterByLocationDropdownMenu, "hover");
-        ReusableMethods.performAction(allOpenPositionsPage.filterByLocationDropdownMenu, "doubleClick");
-
-        ReusableMethods.clickWithJS(allOpenPositionsPage.filterByLocationDropdownMenu);
         ReusableMethods.wait(3);
-
-        // WebDriverWait kullanarak Istanbul seçeneğini bekle ve tıkla
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        WebElement istanbulOption = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("//li[contains(text(), 'Istanbul, Turkey')] | //span[contains(text(), 'Istanbul, Turkey')] | //*[contains(text(), 'Istanbul')]")
-        ));
-        ReusableMethods.clickWithJS(istanbulOption);
-
+        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
         ReusableMethods.wait(3);
-        ReusableMethods.waitForVisibility(allOpenPositionsPage.filterByDepartmentDropdownMenu, 10);
-        ReusableMethods.clickWithJS(allOpenPositionsPage.filterByDepartmentDropdownMenu);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
         ReusableMethods.wait(3);
-
-        // WebDriverWait kullanarak Quality Assurance seçeneğini bekle ve tıkla
-        WebElement qaOption = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("//li[contains(text(), 'Quality Assurance')] | //span[contains(text(), 'Quality Assurance')] | //*[contains(text(), 'Quality')]")
-        ));
-        ReusableMethods.clickWithJS(qaOption);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.istanbulTurkiye.click();
 
         //Verify the presence of the jobs list
         ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.wait(3);
         ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
         System.out.println("✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed");
-
         System.out.println("✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified");
     }
 
@@ -140,8 +123,19 @@ public class InsiderE2ETests {
 
         Driver.getDriver().get(ConfigReader.getProperty("URL2"));
         ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.waitForVisibility(allOpenPositionsPage.jobCard, 20);
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.istanbulTurkiye.click();
+        ReusableMethods.wait(3);
         ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.waitForVisibility(allOpenPositionsPage.jobCard, 10);
         ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
 
         // Position kontrolü
@@ -154,24 +148,45 @@ public class InsiderE2ETests {
 
         // Location kontrolü
         String locationText = allOpenPositionsPage.location.getText();
-        assert locationText.contains("Istanbul, Turkey") : "Location does not contain 'Istanbul, Turkey'. Actual: " + locationText;
+        assert locationText.contains("Istanbul, Turkiye") : "Location does not contain 'Istanbul, Turkey'. Actual: " + locationText;
 
         System.out.println("✓ Test 4 PASSED: All job details verified successfully");
     }
+
 
     @Test(description = "Test Case 5: Click the 'View Role' button and check that this action redirects us to the Lever Application form page")
     public void test05_VerifyLeverApplicationRedirect() {
 
         Driver.getDriver().get(ConfigReader.getProperty("URL2"));
         ReusableMethods.waitForPageToLoad(10);
+
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.filterByLocationDropdownMenu.click();
+        ReusableMethods.wait(3);
+        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
+        ReusableMethods.wait(3);
+        allOpenPositionsPage.istanbulTurkiye.click();
+
+        ReusableMethods.wait(3);
         ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.hover(allOpenPositionsPage.jobCard);
         ReusableMethods.waitForClickability(allOpenPositionsPage.viewRoleButton, 10);
+
+        // Mevcut pencereyi kaydet
+        String originalWindow = Driver.getDriver().getWindowHandle();
+        ReusableMethods.wait(3);
         allOpenPositionsPage.viewRoleButton.click();
+        ReusableMethods.switchToNewWindow(originalWindow);
         ReusableMethods.waitForPageToLoad(10);
         ReusableMethods.assertPageURL("https://jobs.lever.co/useinsider/");
-        ReusableMethods.assertElementDisplayed(leverApplicationFormPage.applyForThisJobButton, "Application Form");
-        System.out.println("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
 
+        // Başvuru butonunun yeni pencerede görüntülendiğini doğrula
+        ReusableMethods.assertElementDisplayed(leverApplicationFormPage.applyForThisJobButton, "Apply for this job button");
+        System.out.println("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
     }
 
 

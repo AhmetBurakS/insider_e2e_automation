@@ -1,0 +1,1 @@
+{"uuid":"e6ba5327-fead-44be-a4e1-27cf26685e37","name":"tests.InsiderE2ETests.setUp","children":["f123ecdf-4f76-4ae2-9429-dd0fd1fcc9a5"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1759511532641,"stop":1759511536279}],"afters":[],"start":1759511532641,"stop":1759511536279}

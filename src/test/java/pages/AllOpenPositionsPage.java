@@ -15,19 +15,19 @@ public class AllOpenPositionsPage {
     @FindBy(xpath = "//span[@data-select2-id='6']")
     public WebElement removeAllItemsFilterByDepartmentDropdownMenu;
 
-    @FindBy(css = "#select2-filter-by-location-container")
+    @FindBy(xpath = "(//span[@class='select2-selection__arrow' and @role='presentation'])[1]")
     public WebElement filterByLocationDropdownMenu;
 
     @FindBy(xpath = "//span[@id='select2-filter-by-department-container']")
     public WebElement filterByDepartmentDropdownMenu;
 
-    @FindBy(xpath = "(//*[contains(text(), 'Istanbul, Turkiye')])[3]")
+    @FindBy(xpath = "//li[@class='select2-results__option' and text()='Istanbul, Turkiye']")
     public WebElement istanbulTurkiye;
 
-    @FindBy(xpath = "//li[text()='Quality Assurance']")
+    @FindBy(xpath = "//li[@class='select2-results__option' and text()='Quality Assurance']")
     public WebElement qualityAssurance;
 
-    @FindBy(xpath = "(.//p[contains(@class, 'position-title')])[2]")
+    @FindBy(xpath = "//p[@class='position-title font-weight-bold']")
     public WebElement jobCard;
 
     @FindBy(xpath = ".//p[contains(@class, 'position-title')]")

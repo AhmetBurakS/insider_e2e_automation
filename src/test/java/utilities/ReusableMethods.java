@@ -9,6 +9,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class ReusableMethods {
 
@@ -221,78 +222,15 @@ public class ReusableMethods {
 
     }
 
-    /**
-     * Dinamik Actions metodu - farklı action türlerini gerçekleştirir
-     * @param element Hedef WebElement
-     * @param actionType Action türü ("hover", "doubleClick", "rightClick", "dragAndDrop", "moveToElement")
-     * @param targetElement Drag&Drop için hedef element (opsiyonel)
-     */
-    public static void performAction(WebElement element, String actionType, WebElement... targetElement) {
-        Actions actions = new Actions(Driver.getDriver());
-
-        try {
-            switch (actionType.toLowerCase()) {
-                case "hover":
-                case "movetoelement":
-                    actions.moveToElement(element).perform();
-                    System.out.println("✓ Hover action performed on element");
-                    break;
-
-                case "doubleclick":
-                    actions.doubleClick(element).perform();
-                    System.out.println("✓ Double click action performed on element");
-                    break;
-
-                case "rightclick":
-                case "contextclick":
-                    actions.contextClick(element).perform();
-                    System.out.println("✓ Right click action performed on element");
-                    break;
-
-                case "draganddrop":
-                    if (targetElement.length > 0) {
-                        actions.dragAndDrop(element, targetElement[0]).perform();
-                        System.out.println("✓ Drag and drop action performed");
-                    } else {
-                        System.err.println("❌ Target element required for drag and drop action");
-                    }
-                    break;
-
-                case "clickandhold":
-                    actions.clickAndHold(element).perform();
-                    System.out.println("✓ Click and hold action performed on element");
-                    break;
-
-                case "release":
-                    actions.release(element).perform();
-                    System.out.println("✓ Release action performed on element");
-                    break;
-
-                default:
-                    System.err.println("❌ Unknown action type: " + actionType);
-                    break;
+    public static void switchToNewWindow(String originalWindowHandle) {
+        Set<String> allWindowHandles = Driver.getDriver().getWindowHandles();
+        for (String handle : allWindowHandles) {
+            if (!handle.equals(originalWindowHandle)) {
+                Driver.getDriver().switchTo().window(handle);
+                return;
             }
-        } catch (Exception e) {
-            System.err.println("❌ Action failed: " + e.getMessage());
-            throw new RuntimeException("Action '" + actionType + "' failed on element", e);
         }
-    }
-
-    /**
-     * Overloaded metod - basit hover action için
-     * @param element Hover yapılacak element
-     */
-    public static void hoverOnElement(WebElement element) {
-        performAction(element, "hover");
-    }
-
-    /**
-     * Overloaded metod - drag and drop için
-     * @param sourceElement Kaynak element
-     * @param targetElement Hedef element
-     */
-    public static void dragAndDropElement(WebElement sourceElement, WebElement targetElement) {
-        performAction(sourceElement, "dragAndDrop", targetElement);
+        throw new RuntimeException("Yeni pencere bulunamadı!");
     }
 
 }
