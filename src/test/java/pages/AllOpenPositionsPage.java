@@ -9,11 +9,23 @@ public class AllOpenPositionsPage {
 
     public AllOpenPositionsPage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//span[@title='Remove all items']")
-    public WebElement removeAllItems;
+    @FindBy(xpath = "//span[@data-select2-id='3']")
+    public WebElement removeAllItemsFilterByLocationDropdownMenu;
 
-    @FindBy(xpath = "//span[@title='Istanbul, Turkiye']")
+    @FindBy(xpath = "//span[@data-select2-id='6']")
+    public WebElement removeAllItemsFilterByDepartmentDropdownMenu;
+
+    @FindBy(css = "#select2-filter-by-location-container")
+    public WebElement filterByLocationDropdownMenu;
+
+    @FindBy(xpath = "//span[@id='select2-filter-by-department-container']")
+    public WebElement filterByDepartmentDropdownMenu;
+
+    @FindBy(xpath = "(//*[contains(text(), 'Istanbul, Turkiye')])[3]")
     public WebElement istanbulTurkiye;
+
+    @FindBy(xpath = "//li[text()='Quality Assurance']")
+    public WebElement qualityAssurance;
 
     @FindBy(xpath = ".//p[contains(@class, 'position-title')]")
     public WebElement jobCard;

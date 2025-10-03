@@ -10,6 +10,6 @@ public class QualityAssurancePage {
     public QualityAssurancePage(){PageFactory.initElements(Driver.getDriver(),this);}
 
     @FindBy(xpath = "//a[text()='See all QA jobs']")
-    public WebElement seeAllQaJobs;
+    public WebElement seeAllQAJobsButton;
 
 }

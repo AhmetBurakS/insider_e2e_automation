@@ -1,5 +1,10 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -80,8 +85,64 @@ public class InsiderE2ETests {
     @Test(description = "Test Case 3: Go to https://useinsider.com/careers/quality-assurance/, click 'See all QA jobs', filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance', check the presence of the jobs list")
     public void test03_VerifyQAJobsFiltering() {
 
+        // Navigate to Quality Assurance page
+        System.out.println("Navigating to QA page...");
+        Driver.getDriver().get(ConfigReader.getProperty("URL"));
+        ReusableMethods.waitForPageToLoad(10);
+        ReusableMethods.assertPageURL("useinsider.com/careers/quality-assurance/");
+        ReusableMethods.assertPageTitle("quality assurance");
+        System.out.println("✓ QA page is successfully opened and verified");
+
+        // Click "See all QA jobs" button
+        qualityAssurancePage.seeAllQAJobsButton.click();
+        ReusableMethods.waitForPageToLoad(10);
+        ReusableMethods.assertPageURL("https://useinsider.com/careers/open-positions/?department=qualityassurance");
+        ReusableMethods.assertPageTitle("Insider Open Positions | Insider");
+        System.out.println("✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified");
+
+        //Filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance'
+        ReusableMethods.waitForVisibility(allOpenPositionsPage.filterByLocationDropdownMenu, 10);
+        ReusableMethods.clickWithJS(allOpenPositionsPage.filterByLocationDropdownMenu);
+        ReusableMethods.wait(3);
+
+        // WebDriverWait kullanarak Istanbul seçeneğini bekle ve tıkla
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebElement istanbulOption = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[contains(text(), 'Istanbul, Turkey')] | //span[contains(text(), 'Istanbul, Turkey')] | //*[contains(text(), 'Istanbul')]")
+        ));
+        ReusableMethods.clickWithJS(istanbulOption);
+
+        ReusableMethods.wait(3);
+        ReusableMethods.waitForVisibility(allOpenPositionsPage.filterByDepartmentDropdownMenu, 10);
+        ReusableMethods.clickWithJS(allOpenPositionsPage.filterByDepartmentDropdownMenu);
+        ReusableMethods.wait(3);
+
+        // WebDriverWait kullanarak Quality Assurance seçeneğini bekle ve tıkla
+        WebElement qaOption = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[contains(text(), 'Quality Assurance')] | //span[contains(text(), 'Quality Assurance')] | //*[contains(text(), 'Quality')]")
+        ));
+        ReusableMethods.clickWithJS(qaOption);
+
+        //Verify the presence of the jobs list
+        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
+        ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
+        System.out.println("✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed");
+
+        System.out.println("✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified");
+    }
+
+    @Test(description = "Test Case 4: Check that all jobs' Position contains 'Quality Assurance', Department contains 'Quality Assurance', and Location contains 'Istanbul, Turkey'")
+    public void test04_VerifyJobDetails() {
+
 
     }
+
+    @Test(description = "Test Case 5: Click the 'View Role' button and check that this action redirects us to the Lever Application form page")
+    public void test05_VerifyLeverApplicationRedirect() {
+
+
+    }
+
 
     @AfterMethod
     public void tearDown() {
