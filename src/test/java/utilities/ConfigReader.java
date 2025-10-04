@@ -1,28 +1,25 @@
 package utilities;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigReader {
 
-    static Properties properties;
+    private static Properties properties;
 
     static {
-
-        String dosyaYolu = "configuration.properties";
-
-        try{
-            FileInputStream fis = new FileInputStream(dosyaYolu);
+        try {
             properties = new Properties();
-            properties.load(fis);
-
-        }catch (IOException e) {
-            System.out.println("properties dosyasi okunamadi");
+            InputStream stream = ConfigReader.class.getClassLoader()
+                    .getResourceAsStream("configuration.properties");
+            properties.load(stream);
+            stream.close();
+        } catch (Exception e) {
+            throw new RuntimeException("Configuration yüklenemedi", e);
         }
     }
 
-    public static String getProperty(String key){
+    public static String getProperty(String key) {
         return properties.getProperty(key);
     }
 }

@@ -62,10 +62,11 @@ public class ReusableMethods {
 
     public static void acceptCookies(HomePage homePage) {
         try {
+            waitForVisibility(homePage.acceptAllCookiesButton, 5);
             homePage.acceptAllCookiesButton.click();
             logger.info("✓ Cookies accepted");
         } catch (Exception e) {
-            logger.info("✓ Cookie banner not present");
+            logger.info("✓ Cookie banner not present or already accepted");
         }
     }
 

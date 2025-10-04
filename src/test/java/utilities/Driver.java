@@ -13,78 +13,72 @@ import java.time.Duration;
 
 public class Driver {
 
-    private Driver(){
+    private static WebDriver driver;
 
+    private Driver() {
     }
 
-    public static WebDriver driver;
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            try {
+                String browser = ConfigReader.getProperty("browser");
+                String headless = ConfigReader.getProperty("headless");
+                boolean isHeadless = "true".equalsIgnoreCase(headless);
 
-        String browser = ConfigReader.getProperty("browser");
-        String headless = ConfigReader.getProperty("headless");
-        boolean isHeadless = "true".equalsIgnoreCase(headless);
+                switch (browser.toLowerCase()) {
+                    case "safari":
+                        driver = new SafariDriver();
+                        break;
 
-        if (driver == null){
+                    case "firefox":
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        driver = new FirefoxDriver(firefoxOptions);
+                        break;
 
-            switch (browser){
+                    case "edge":
+                        EdgeOptions edgeOptions = new EdgeOptions();
+                        edgeOptions.addArguments("--disable-notifications");
+                        driver = new EdgeDriver(edgeOptions);
+                        break;
 
-                case "safari":
-                    // Safari headless desteklemiyor
-                    driver = new SafariDriver();
-                    break;
+                    default:
+                        ChromeOptions options = new ChromeOptions();
+                        options.addArguments("--incognito");
+                        options.addArguments("--disable-notifications");
 
-                case "firefox":
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    if (isHeadless) {
-                        firefoxOptions.addArguments("--headless");
-                        System.out.println("Firefox running in headless mode");
-                    }
-                    driver = new FirefoxDriver(firefoxOptions);
-                    break;
+                        if (isHeadless) {
+                            options.addArguments("--headless");
+                            options.addArguments("--no-sandbox");
+                            options.addArguments("--disable-dev-shm-usage");
+                            options.addArguments("--disable-gpu");
+                            System.out.println("Chrome running in headless mode");
+                        }
 
-                case "edge":
-                    EdgeOptions edgeOptions = new EdgeOptions();
-                    edgeOptions.addArguments("--disable-notifications");
-                    if (isHeadless) {
-                        edgeOptions.addArguments("--headless");
-                        edgeOptions.addArguments("--no-sandbox");
-                        edgeOptions.addArguments("--disable-dev-shm-usage");
-                        edgeOptions.addArguments("--disable-gpu");
-                        System.out.println("Edge running in headless mode");
-                    }
-                    driver = new EdgeDriver(edgeOptions);
-                    break;
+                        driver = new ChromeDriver(options);
+                        break;
+                }
 
-                default:
-                    // Chrome için seçenekler tanımlanıyor
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--incognito"); // Gizli mod
-                    options.addArguments("--disable-notifications"); // Bildirimleri devre dışı bırakma
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-                    // Headless mod kontrolü
-                    if (isHeadless) {
-                        options.addArguments("--headless");
-                        options.addArguments("--no-sandbox");
-                        options.addArguments("--disable-dev-shm-usage");
-                        options.addArguments("--disable-gpu");
-                        System.out.println("Chrome running in headless mode");
-                    }
-
-                    driver = new ChromeDriver(options); // ChromeDriver oluşturuluyor
-
+            } catch (Exception e) {
+                System.err.println("Driver oluşturulamadı: " + e.getMessage());
+                throw new RuntimeException("Driver başlatma hatası", e);
             }
         }
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         return driver;
     }
 
-    public static void closeDriver(){
-        if (driver != null){
-            driver.quit();
-            driver = null;
+    public static void closeDriver() {
+        if (driver != null) {
+            try {
+                driver.quit();
+            } catch (Exception e) {
+                System.err.println("Driver kapatma hatası: " + e.getMessage());
+            } finally {
+                driver = null;
+            }
         }
     }
 }

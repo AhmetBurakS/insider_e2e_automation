@@ -1,45 +1,12 @@
 package tests;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.*;
-import utilities.ConfigReader;
-import utilities.Driver;
 import utilities.ReusableMethods;
 import io.qameta.allure.*;
 
 @Epic("Insider E2E Tests")
 @Feature("Web UI Tests")
-public class InsiderE2ETests {
-
-    private static final Logger logger = LogManager.getLogger(InsiderE2ETests.class);
-
-    HomePage homePage;
-    CareersPage careersPage;
-    QualityAssurancePage qualityAssurancePage;
-    AllOpenPositionsPage allOpenPositionsPage;
-    LeverApplicationFormPage leverApplicationFormPage;
-
-    @BeforeMethod
-    public void setUp() {
-        logger.info("Setting up test environment");
-        initializePageObjects();
-        Driver.getDriver().get(ConfigReader.getProperty("BaseURL"));
-        ReusableMethods.waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
-        ReusableMethods.acceptCookies(homePage);
-        logger.info("Test environment setup completed");
-    }
-
-    private void initializePageObjects() {
-        homePage = new HomePage();
-        careersPage = new CareersPage();
-        qualityAssurancePage = new QualityAssurancePage();
-        allOpenPositionsPage = new AllOpenPositionsPage();
-        leverApplicationFormPage = new LeverApplicationFormPage();
-    }
+public class InsiderE2ETests extends BaseTest {
 
     @Severity(SeverityLevel.CRITICAL)
     @Story("Home Page Verification")
@@ -84,12 +51,5 @@ public class InsiderE2ETests {
         logger.info("Starting Test 5: Verifying Lever Application redirect");
         ReusableMethods.verifyLeverApplicationRedirect(allOpenPositionsPage, leverApplicationFormPage);
         logger.info("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        logger.info("Cleaning up test environment");
-        Driver.closeDriver();
-        logger.info("Test environment cleaned up");
     }
 }

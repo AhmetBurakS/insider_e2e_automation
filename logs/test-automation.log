@@ -379,3 +379,149 @@
 2025-10-04 22:26:50.749 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
 2025-10-04 22:26:50.751 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
 2025-10-04 22:26:50.841 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 23:20:56.648 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:20:56.649 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:20:56.649 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:20:56.709 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:20:56.727 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:21:56.498 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:21:56.499 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:21:56.500 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:21:56.562 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:21:56.580 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:28:38.009 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:28:38.010 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:28:38.010 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:28:38.076 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:28:38.095 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:29:23.141 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:29:23.142 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:29:23.142 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:29:23.204 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:29:23.222 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:32:44.913 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:32:44.914 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:32:44.914 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:32:44.978 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:32:44.998 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:38:31.554 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:38:31.555 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:38:31.555 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 23:38:31.619 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 23:38:31.636 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:38:35.319 [main] INFO  tests.BaseTest - ✓ Tarayıcı başlatıldı ve URL açıldı
+2025-10-04 23:38:35.478 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 23:38:45.483 [main] INFO  tests.BaseTest - ✅ Test ortamı hazırlandı
+2025-10-04 23:38:45.531 [main] INFO  tests.BaseTest - Starting Test 1: Verifying Insider home page
+2025-10-04 23:38:45.532 [main] INFO  utilities.ReusableMethods - Verifying page title contains 'Insider'...
+2025-10-04 23:38:45.540 [main] INFO  utilities.ReusableMethods - ✓ Page title verification successful
+2025-10-04 23:38:45.540 [main] INFO  utilities.ReusableMethods - Verifying page URL contains 'useinsider.com'...
+2025-10-04 23:38:45.547 [main] INFO  utilities.ReusableMethods - ✓ Page URL verification successful
+2025-10-04 23:38:45.547 [main] INFO  utilities.ReusableMethods - Verifying main page elements are displayed...
+2025-10-04 23:38:45.564 [main] INFO  utilities.ReusableMethods - ✓ Navigation Bar is displayed
+2025-10-04 23:38:45.580 [main] INFO  utilities.ReusableMethods - ✓ Company Dropdown Menu is displayed
+2025-10-04 23:38:45.581 [main] INFO  tests.BaseTest - ✓ Test 1 PASSED: Insider home page is successfully opened and verified
+2025-10-04 23:38:45.587 [main] INFO  tests.BaseTest - 🧹 Test temizleniyor...
+2025-10-04 23:38:45.674 [main] INFO  tests.BaseTest - ✓ Tarayıcı kapatıldı
+2025-10-04 23:38:45.675 [main] INFO  tests.BaseTest - ✅ Test tamamlandı
+2025-10-04 23:38:45.678 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:38:49.163 [main] INFO  tests.BaseTest - ✓ Tarayıcı başlatıldı ve URL açıldı
+2025-10-04 23:38:49.338 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 23:38:59.343 [main] INFO  tests.BaseTest - ✅ Test ortamı hazırlandı
+2025-10-04 23:38:59.348 [main] INFO  tests.BaseTest - Starting Test 2: Verifying Careers page and sections
+2025-10-04 23:38:59.348 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 23:38:59.425 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 23:39:01.742 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 23:39:11.748 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 23:39:11.752 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 23:39:11.754 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 23:39:11.754 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 23:39:11.773 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 23:39:11.785 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 23:39:11.795 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 23:39:11.805 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 23:39:11.805 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 23:39:14.824 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 23:39:17.959 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 2 is displayed
+2025-10-04 23:39:17.959 [main] INFO  utilities.ReusableMethods - Verifying Life at Insider section is displayed...
+2025-10-04 23:39:17.974 [main] INFO  utilities.ReusableMethods - ✓ Life at Insider Section is displayed
+2025-10-04 23:39:17.974 [main] INFO  tests.BaseTest - ✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified
+2025-10-04 23:39:17.976 [main] INFO  tests.BaseTest - 🧹 Test temizleniyor...
+2025-10-04 23:39:18.059 [main] INFO  tests.BaseTest - ✓ Tarayıcı kapatıldı
+2025-10-04 23:39:18.059 [main] INFO  tests.BaseTest - ✅ Test tamamlandı
+2025-10-04 23:39:18.060 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:39:21.189 [main] INFO  tests.BaseTest - ✓ Tarayıcı başlatıldı ve URL açıldı
+2025-10-04 23:39:21.320 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 23:39:31.323 [main] INFO  tests.BaseTest - ✅ Test ortamı hazırlandı
+2025-10-04 23:39:31.329 [main] INFO  tests.BaseTest - Starting Test 3: Verifying QA jobs filtering
+2025-10-04 23:39:31.329 [main] INFO  utilities.ReusableMethods - Navigating to QA page...
+2025-10-04 23:39:41.995 [main] INFO  utilities.ReusableMethods - ✓ QA page is successfully opened and verified
+2025-10-04 23:39:52.693 [main] INFO  utilities.ReusableMethods - ✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified
+2025-10-04 23:39:52.693 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 23:39:55.739 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 23:40:01.815 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 23:40:07.865 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 23:40:07.865 [main] INFO  utilities.ReusableMethods - Verifying job list is displayed...
+2025-10-04 23:40:10.884 [main] INFO  utilities.ReusableMethods - ✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed
+2025-10-04 23:40:10.885 [main] INFO  tests.BaseTest - ✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified
+2025-10-04 23:40:10.886 [main] INFO  tests.BaseTest - 🧹 Test temizleniyor...
+2025-10-04 23:40:10.972 [main] INFO  tests.BaseTest - ✓ Tarayıcı kapatıldı
+2025-10-04 23:40:10.972 [main] INFO  tests.BaseTest - ✅ Test tamamlandı
+2025-10-04 23:40:10.973 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:40:14.002 [main] INFO  tests.BaseTest - ✓ Tarayıcı başlatıldı ve URL açıldı
+2025-10-04 23:40:14.152 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 23:40:24.158 [main] INFO  tests.BaseTest - ✅ Test ortamı hazırlandı
+2025-10-04 23:40:24.164 [main] INFO  tests.BaseTest - Starting Test 4: Verifying job details
+2025-10-04 23:40:24.164 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 23:40:35.062 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 23:40:35.062 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 23:40:38.113 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 23:40:44.181 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 23:40:50.236 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 23:40:50.236 [main] INFO  utilities.ReusableMethods - Preparing job card for verification...
+2025-10-04 23:40:53.261 [main] INFO  utilities.ReusableMethods - ✓ Job card is displayed and ready for verification
+2025-10-04 23:40:53.262 [main] INFO  utilities.ReusableMethods - Verifying job details content...
+2025-10-04 23:40:53.296 [main] INFO  utilities.ReusableMethods - ✓ Position contains 'Quality Assurance': Software Quality Assurance Engineer
+2025-10-04 23:40:53.296 [main] INFO  utilities.ReusableMethods - ✓ Department contains 'Quality Assurance': Quality Assurance
+2025-10-04 23:40:53.296 [main] INFO  utilities.ReusableMethods - ✓ Location contains 'Istanbul, Turkiye': Istanbul, Turkiye
+2025-10-04 23:40:53.296 [main] INFO  utilities.ReusableMethods - ✓ All job details verified successfully
+2025-10-04 23:40:53.296 [main] INFO  tests.BaseTest - ✓ Test 4 PASSED: All job details verified successfully
+2025-10-04 23:40:53.301 [main] INFO  tests.BaseTest - 🧹 Test temizleniyor...
+2025-10-04 23:40:53.393 [main] INFO  tests.BaseTest - ✓ Tarayıcı kapatıldı
+2025-10-04 23:40:53.393 [main] INFO  tests.BaseTest - ✅ Test tamamlandı
+2025-10-04 23:40:53.395 [main] INFO  tests.BaseTest - 🚀 Test başlatılıyor...
+2025-10-04 23:40:56.448 [main] INFO  tests.BaseTest - ✓ Tarayıcı başlatıldı ve URL açıldı
+2025-10-04 23:40:56.585 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 23:41:06.590 [main] INFO  tests.BaseTest - ✅ Test ortamı hazırlandı
+2025-10-04 23:41:06.594 [main] INFO  tests.BaseTest - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 23:41:06.595 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 23:41:17.627 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 23:41:17.627 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 23:41:20.677 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 23:41:26.751 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 23:41:32.801 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 23:41:32.801 [main] INFO  utilities.ReusableMethods - Preparing to click View Role button...
+2025-10-04 23:41:35.929 [main] INFO  utilities.ReusableMethods - ✓ Hovered over job card to reveal View Role button
+2025-10-04 23:41:35.948 [main] INFO  utilities.ReusableMethods - ✓ Original window handle saved
+2025-10-04 23:41:39.040 [main] INFO  utilities.ReusableMethods - ✓ View Role button clicked
+2025-10-04 23:41:39.040 [main] INFO  utilities.ReusableMethods - Switching to new window...
+2025-10-04 23:41:49.052 [main] INFO  utilities.ReusableMethods - ✓ Successfully switched to new window
+2025-10-04 23:41:49.052 [main] INFO  utilities.ReusableMethods - Verifying Lever Application page...
+2025-10-04 23:41:49.055 [main] INFO  utilities.ReusableMethods - ✓ Lever Application page URL verification successful
+2025-10-04 23:41:49.066 [main] INFO  utilities.ReusableMethods - ✓ Apply for this job button is displayed and verified
+2025-10-04 23:41:49.066 [main] INFO  tests.BaseTest - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 23:41:49.067 [main] INFO  tests.BaseTest - 🧹 Test temizleniyor...
+2025-10-04 23:41:49.157 [main] INFO  tests.BaseTest - ✓ Tarayıcı kapatıldı
+2025-10-04 23:41:49.157 [main] INFO  tests.BaseTest - ✅ Test tamamlandı
