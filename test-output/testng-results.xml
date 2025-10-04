@@ -2,68 +2,68 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-03T15:12:38 GMT+03:00" name="InsiderE2ETestSuite" finished-at="2025-10-03T15:13:13 GMT+03:00" duration-ms="35259">
+  <suite started-at="2025-10-04T22:23:29 GMT+03:00" name="InsiderE2ETestSuite" finished-at="2025-10-04T22:26:50 GMT+03:00" duration-ms="201306">
     <groups>
     </groups>
-    <test started-at="2025-10-03T15:12:38 GMT+03:00" name="InsiderE2ETests" finished-at="2025-10-03T15:13:13 GMT+03:00" duration-ms="35259">
+    <test started-at="2025-10-04T22:23:29 GMT+03:00" name="InsiderE2ETests" finished-at="2025-10-04T22:26:50 GMT+03:00" duration-ms="201306">
       <class name="tests.InsiderE2ETests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:38 GMT+03:00" name="setUp" finished-at="2025-10-03T15:12:41 GMT+03:00" duration-ms="3773" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:23:29 GMT+03:00" name="setUp" finished-at="2025-10-04T22:23:43 GMT+03:00" duration-ms="13758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test01_VerifyInsiderHomePageOpened()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:41 GMT+03:00" name="test01_VerifyInsiderHomePageOpened" description="Test Case 1: Visit https://useinsider.com/ and check Insider home page is opened or not" finished-at="2025-10-03T15:12:42 GMT+03:00" duration-ms="111" status="PASS">
+        <test-method signature="test01_VerifyInsiderHomePageOpened()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:23:43 GMT+03:00" name="test01_VerifyInsiderHomePageOpened" description="Test Case 1: Visit https://useinsider.com/ and check Insider home page is opened or not" finished-at="2025-10-04T22:23:43 GMT+03:00" duration-ms="100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test01_VerifyInsiderHomePageOpened -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:42 GMT+03:00" name="tearDown" finished-at="2025-10-03T15:12:42 GMT+03:00" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:23:43 GMT+03:00" name="tearDown" finished-at="2025-10-04T22:23:43 GMT+03:00" duration-ms="97" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:42 GMT+03:00" name="setUp" finished-at="2025-10-03T15:12:45 GMT+03:00" duration-ms="3298" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:23:43 GMT+03:00" name="setUp" finished-at="2025-10-04T22:23:56 GMT+03:00" duration-ms="13341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test02_VerifyCareersPageAndSections()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:45 GMT+03:00" name="test02_VerifyCareersPageAndSections" description="Test Case 2: Select the &#039;Company&#039; menu in the navigation bar, select &#039;Careers&#039; and check Career page, its Locations, Teams, and Life at Insider blocks are open or not" finished-at="2025-10-03T15:12:50 GMT+03:00" duration-ms="4995" status="PASS">
+        <test-method signature="test02_VerifyCareersPageAndSections()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:23:56 GMT+03:00" name="test02_VerifyCareersPageAndSections" description="Test Case 2: Select the &#039;Company&#039; menu in the navigation bar, select &#039;Careers&#039; and check Career page, its Locations, Teams, and Life at Insider blocks are open or not" finished-at="2025-10-04T22:24:15 GMT+03:00" duration-ms="18210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test02_VerifyCareersPageAndSections -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:50 GMT+03:00" name="tearDown" finished-at="2025-10-03T15:12:50 GMT+03:00" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:24:15 GMT+03:00" name="tearDown" finished-at="2025-10-04T22:24:15 GMT+03:00" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:50 GMT+03:00" name="setUp" finished-at="2025-10-03T15:12:53 GMT+03:00" duration-ms="3367" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:24:15 GMT+03:00" name="setUp" finished-at="2025-10-04T22:24:28 GMT+03:00" duration-ms="13686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test03_VerifyQAJobsFiltering()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:12:53 GMT+03:00" name="test03_VerifyQAJobsFiltering" description="Test Case 3: Go to https://useinsider.com/careers/quality-assurance/, click &#039;See all QA jobs&#039;, filter jobs by Location: &#039;Istanbul, Turkey&#039;, and Department: &#039;Quality Assurance&#039;, check the presence of the jobs list" finished-at="2025-10-03T15:13:06 GMT+03:00" duration-ms="12531" status="PASS">
+        <test-method signature="test03_VerifyQAJobsFiltering()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:24:28 GMT+03:00" name="test03_VerifyQAJobsFiltering" description="Test Case 3: Go to https://useinsider.com/careers/quality-assurance/, click &#039;See all QA jobs&#039;, filter jobs by Location: &#039;Istanbul, Turkey&#039;, and Department: &#039;Quality Assurance&#039;, check the presence of the jobs list" finished-at="2025-10-04T22:25:09 GMT+03:00" duration-ms="40642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test03_VerifyQAJobsFiltering -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:06 GMT+03:00" name="tearDown" finished-at="2025-10-03T15:13:06 GMT+03:00" duration-ms="93" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:25:09 GMT+03:00" name="tearDown" finished-at="2025-10-04T22:25:09 GMT+03:00" duration-ms="92" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:06 GMT+03:00" name="setUp" finished-at="2025-10-03T15:13:09 GMT+03:00" duration-ms="3365" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:25:09 GMT+03:00" name="setUp" finished-at="2025-10-04T22:25:24 GMT+03:00" duration-ms="14507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test04_VerifyJobDetails()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:09 GMT+03:00" name="test04_VerifyJobDetails" description="Test Case 4: Check that all jobs&#039; Position contains &#039;Quality Assurance&#039;, Department contains &#039;Quality Assurance&#039;, and Location contains &#039;Istanbul, Turkey&#039;" finished-at="2025-10-03T15:13:09 GMT+03:00" duration-ms="3" status="PASS">
+        <test-method signature="test04_VerifyJobDetails()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:25:24 GMT+03:00" name="test04_VerifyJobDetails" description="Test Case 4: Check that all jobs&#039; Position contains &#039;Quality Assurance&#039;, Department contains &#039;Quality Assurance&#039;, and Location contains &#039;Istanbul, Turkey&#039;" finished-at="2025-10-04T22:25:53 GMT+03:00" duration-ms="29703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test04_VerifyJobDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:09 GMT+03:00" name="tearDown" finished-at="2025-10-03T15:13:10 GMT+03:00" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:25:53 GMT+03:00" name="tearDown" finished-at="2025-10-04T22:25:53 GMT+03:00" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:10 GMT+03:00" name="setUp" finished-at="2025-10-03T15:13:13 GMT+03:00" duration-ms="3297" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:25:53 GMT+03:00" name="setUp" finished-at="2025-10-04T22:26:07 GMT+03:00" duration-ms="13774" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test05_VerifyLeverApplicationRedirect()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:13 GMT+03:00" name="test05_VerifyLeverApplicationRedirect" description="Test Case 5: Click the &#039;View Role&#039; button and check that this action redirects us to the Lever Application form page" finished-at="2025-10-03T15:13:13 GMT+03:00" duration-ms="1" status="PASS">
+        <test-method signature="test05_VerifyLeverApplicationRedirect()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:26:07 GMT+03:00" name="test05_VerifyLeverApplicationRedirect" description="Test Case 5: Click the &#039;View Role&#039; button and check that this action redirects us to the Lever Application form page" finished-at="2025-10-04T22:26:50 GMT+03:00" duration-ms="43057" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test05_VerifyLeverApplicationRedirect -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@3246fb96]" started-at="2025-10-03T15:13:13 GMT+03:00" name="tearDown" finished-at="2025-10-03T15:13:13 GMT+03:00" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.InsiderE2ETests@62435e70]" started-at="2025-10-04T22:26:50 GMT+03:00" name="tearDown" finished-at="2025-10-04T22:26:50 GMT+03:00" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

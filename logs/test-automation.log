@@ -56,3 +56,326 @@
 2025-10-04 16:15:22.242 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
 2025-10-04 16:15:22.243 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
 2025-10-04 16:15:22.334 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:14:50.242 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 21:14:50.271 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:15:05.665 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:15:05.665 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:15:05.746 [main] INFO  tests.InsiderE2ETests - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 21:15:05.746 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 21:15:17.907 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 21:15:17.907 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 21:15:20.963 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 21:15:27.099 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 21:15:33.222 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 21:15:33.222 [main] INFO  utilities.ReusableMethods - Preparing to click View Role button...
+2025-10-04 21:15:36.399 [main] INFO  utilities.ReusableMethods - ✓ Hovered over job card to reveal View Role button
+2025-10-04 21:15:36.436 [main] INFO  utilities.ReusableMethods - ✓ Original window handle saved
+2025-10-04 21:15:39.509 [main] INFO  utilities.ReusableMethods - ✓ View Role button clicked
+2025-10-04 21:15:39.509 [main] INFO  utilities.ReusableMethods - Switching to new window...
+2025-10-04 21:15:49.526 [main] INFO  utilities.ReusableMethods - ✓ Successfully switched to new window
+2025-10-04 21:15:49.527 [main] INFO  utilities.ReusableMethods - Verifying Lever Application page...
+2025-10-04 21:15:49.544 [main] INFO  utilities.ReusableMethods - ✓ Lever Application page URL verification successful
+2025-10-04 21:15:49.561 [main] INFO  utilities.ReusableMethods - ✓ Apply for this job button is displayed and verified
+2025-10-04 21:15:49.561 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 21:15:49.569 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:15:49.664 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:35:36.882 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 21:35:36.910 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:35:50.985 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:35:50.985 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:35:51.069 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 21:35:51.069 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 21:35:51.155 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 21:35:53.397 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 21:36:03.402 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 21:36:03.433 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 21:36:03.443 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 21:36:03.444 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 21:36:03.474 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 21:36:03.484 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 21:36:03.495 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 21:36:03.505 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 21:36:03.505 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 21:36:06.557 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 21:36:09.765 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 2 is displayed
+2025-10-04 21:36:09.765 [main] INFO  utilities.ReusableMethods - Verifying Life at Insider section is displayed...
+2025-10-04 21:36:09.790 [main] INFO  utilities.ReusableMethods - ✓ Life at Insider Section is displayed
+2025-10-04 21:36:09.790 [main] INFO  tests.InsiderE2ETests - ✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified
+2025-10-04 21:36:09.799 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:36:09.888 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:38:51.756 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:39:05.145 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:39:05.145 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:39:05.207 [main] INFO  tests.InsiderE2ETests - Starting Test 1: Verifying Insider home page
+2025-10-04 21:39:05.208 [main] INFO  utilities.ReusableMethods - Verifying page title contains 'Insider'...
+2025-10-04 21:39:05.218 [main] INFO  utilities.ReusableMethods - ✓ Page title verification successful
+2025-10-04 21:39:05.219 [main] INFO  utilities.ReusableMethods - Verifying page URL contains 'useinsider.com'...
+2025-10-04 21:39:05.227 [main] INFO  utilities.ReusableMethods - ✓ Page URL verification successful
+2025-10-04 21:39:05.227 [main] INFO  utilities.ReusableMethods - Verifying main page elements are displayed...
+2025-10-04 21:39:05.244 [main] INFO  utilities.ReusableMethods - ✓ Navigation Bar is displayed
+2025-10-04 21:39:05.259 [main] INFO  utilities.ReusableMethods - ✓ Company Dropdown Menu is displayed
+2025-10-04 21:39:05.259 [main] INFO  tests.InsiderE2ETests - ✓ Test 1 PASSED: Insider home page is successfully opened and verified
+2025-10-04 21:39:05.267 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:39:05.354 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:39:05.356 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:39:18.670 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:39:18.670 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:39:18.675 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 21:39:18.676 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 21:39:18.732 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 21:39:22.031 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 21:39:32.036 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 21:39:32.061 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 21:39:32.074 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 21:39:32.074 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 21:39:32.102 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 21:39:32.112 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 21:39:32.121 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 21:39:32.130 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 21:39:32.130 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 21:39:35.182 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 21:39:36.258 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:39:36.353 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:39:36.355 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:39:50.049 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:39:50.049 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:39:50.054 [main] INFO  tests.InsiderE2ETests - Starting Test 3: Verifying QA jobs filtering
+2025-10-04 21:39:50.055 [main] INFO  utilities.ReusableMethods - Navigating to QA page...
+2025-10-04 21:40:01.746 [main] INFO  utilities.ReusableMethods - ✓ QA page is successfully opened and verified
+2025-10-04 21:40:12.546 [main] INFO  utilities.ReusableMethods - ✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified
+2025-10-04 21:40:12.546 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 21:40:15.623 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 21:40:21.760 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 21:40:27.862 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 21:40:27.863 [main] INFO  utilities.ReusableMethods - Verifying job list is displayed...
+2025-10-04 21:40:30.915 [main] INFO  utilities.ReusableMethods - ✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed
+2025-10-04 21:40:30.915 [main] INFO  tests.InsiderE2ETests - ✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified
+2025-10-04 21:40:30.918 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:40:31.010 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:40:31.013 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:40:44.406 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:40:44.407 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:40:44.412 [main] INFO  tests.InsiderE2ETests - Starting Test 4: Verifying job details
+2025-10-04 21:40:44.412 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 21:40:55.494 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 21:40:55.496 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 21:40:58.577 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 21:41:04.723 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 21:41:10.813 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 21:41:10.813 [main] INFO  utilities.ReusableMethods - Preparing job card for verification...
+2025-10-04 21:41:13.886 [main] INFO  utilities.ReusableMethods - ✓ Job card is displayed and ready for verification
+2025-10-04 21:41:13.886 [main] INFO  utilities.ReusableMethods - Verifying job details content...
+2025-10-04 21:41:13.915 [main] INFO  utilities.ReusableMethods - ✓ Position contains 'Quality Assurance': Software Quality Assurance Engineer
+2025-10-04 21:41:13.916 [main] INFO  utilities.ReusableMethods - ✓ Department contains 'Quality Assurance': Quality Assurance
+2025-10-04 21:41:13.916 [main] INFO  utilities.ReusableMethods - ✓ Location contains 'Istanbul, Turkiye': Istanbul, Turkiye
+2025-10-04 21:41:13.916 [main] INFO  utilities.ReusableMethods - ✓ All job details verified successfully
+2025-10-04 21:41:13.916 [main] INFO  tests.InsiderE2ETests - ✓ Test 4 PASSED: All job details verified successfully
+2025-10-04 21:41:13.917 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:41:14.003 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 21:41:14.004 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 21:41:27.202 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 21:41:27.203 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 21:41:27.207 [main] INFO  tests.InsiderE2ETests - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 21:41:27.207 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 21:41:39.129 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 21:41:39.129 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 21:41:42.209 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 21:41:48.344 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 21:41:54.447 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 21:41:54.447 [main] INFO  utilities.ReusableMethods - Preparing to click View Role button...
+2025-10-04 21:41:57.619 [main] INFO  utilities.ReusableMethods - ✓ Hovered over job card to reveal View Role button
+2025-10-04 21:41:57.644 [main] INFO  utilities.ReusableMethods - ✓ Original window handle saved
+2025-10-04 21:42:00.735 [main] INFO  utilities.ReusableMethods - ✓ View Role button clicked
+2025-10-04 21:42:00.735 [main] INFO  utilities.ReusableMethods - Switching to new window...
+2025-10-04 21:42:10.751 [main] INFO  utilities.ReusableMethods - ✓ Successfully switched to new window
+2025-10-04 21:42:10.752 [main] INFO  utilities.ReusableMethods - Verifying Lever Application page...
+2025-10-04 21:42:10.773 [main] INFO  utilities.ReusableMethods - ✓ Lever Application page URL verification successful
+2025-10-04 21:42:10.797 [main] INFO  utilities.ReusableMethods - ✓ Apply for this job button is displayed and verified
+2025-10-04 21:42:10.797 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 21:42:10.800 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 21:42:10.889 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:05:11.451 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 22:05:11.481 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:05:26.222 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:05:26.222 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:05:26.301 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 22:05:26.301 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 22:05:26.378 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 22:05:28.601 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 22:05:55.760 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 22:05:55.800 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:06:09.634 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:06:09.634 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:06:09.714 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 22:06:09.715 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 22:06:09.793 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 22:06:11.413 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 22:06:21.419 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 22:06:21.449 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 22:06:21.460 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 22:06:21.460 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 22:06:21.490 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 22:06:21.500 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 22:06:21.510 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 22:06:21.520 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 22:06:21.520 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 22:06:24.570 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 22:06:28.706 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:06:28.804 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:10:22.294 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 22:10:22.323 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:10:36.557 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:10:36.557 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:10:36.639 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 22:10:36.640 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 22:10:36.723 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 22:10:38.379 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 22:10:48.384 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 22:10:48.412 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 22:10:48.424 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 22:10:48.424 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 22:10:48.454 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 22:10:48.464 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 22:10:48.474 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 22:10:48.484 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 22:10:48.485 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 22:10:51.540 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 22:10:55.650 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:10:55.748 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:19:12.340 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/Library/Caches/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml
+
+2025-10-04 22:19:12.370 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:19:28.007 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:19:28.007 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:19:28.092 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 22:19:28.092 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 22:19:28.174 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 22:19:29.963 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 22:19:39.968 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 22:19:39.995 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 22:19:40.007 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 22:19:40.007 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 22:19:40.039 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 22:19:40.049 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 22:19:40.059 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 22:19:40.069 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 22:19:40.070 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 22:19:43.121 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 22:19:46.342 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 2 is displayed
+2025-10-04 22:19:46.342 [main] INFO  utilities.ReusableMethods - Verifying Life at Insider section is displayed...
+2025-10-04 22:19:46.370 [main] INFO  utilities.ReusableMethods - ✓ Life at Insider Section is displayed
+2025-10-04 22:19:46.371 [main] INFO  tests.InsiderE2ETests - ✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified
+2025-10-04 22:19:46.380 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:19:46.472 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:23:29.475 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 22:23:29.476 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 22:23:29.476 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-10-04 22:23:29.535 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/vk/IdeaProjects/InsiderE2EAutomation/src/test/java/runner/testng.xml
+
+2025-10-04 22:23:29.552 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:23:43.304 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:23:43.304 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:23:43.360 [main] INFO  tests.InsiderE2ETests - Starting Test 1: Verifying Insider home page
+2025-10-04 22:23:43.361 [main] INFO  utilities.ReusableMethods - Verifying page title contains 'Insider'...
+2025-10-04 22:23:43.375 [main] INFO  utilities.ReusableMethods - ✓ Page title verification successful
+2025-10-04 22:23:43.375 [main] INFO  utilities.ReusableMethods - Verifying page URL contains 'useinsider.com'...
+2025-10-04 22:23:43.388 [main] INFO  utilities.ReusableMethods - ✓ Page URL verification successful
+2025-10-04 22:23:43.388 [main] INFO  utilities.ReusableMethods - Verifying main page elements are displayed...
+2025-10-04 22:23:43.416 [main] INFO  utilities.ReusableMethods - ✓ Navigation Bar is displayed
+2025-10-04 22:23:43.440 [main] INFO  utilities.ReusableMethods - ✓ Company Dropdown Menu is displayed
+2025-10-04 22:23:43.441 [main] INFO  tests.InsiderE2ETests - ✓ Test 1 PASSED: Insider home page is successfully opened and verified
+2025-10-04 22:23:43.449 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:23:43.545 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:23:43.549 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:23:56.890 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:23:56.890 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:23:56.895 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 22:23:56.896 [main] INFO  utilities.ReusableMethods - Navigating to Careers page...
+2025-10-04 22:23:56.965 [main] INFO  utilities.ReusableMethods - ✓ Company menu clicked
+2025-10-04 22:23:58.706 [main] INFO  utilities.ReusableMethods - ✓ Careers menu clicked
+2025-10-04 22:24:08.711 [main] INFO  utilities.ReusableMethods - Verifying Careers page URL and title...
+2025-10-04 22:24:08.733 [main] INFO  utilities.ReusableMethods - ✓ Careers page URL verification successful
+2025-10-04 22:24:08.745 [main] INFO  utilities.ReusableMethods - ✓ Careers page title verification successful
+2025-10-04 22:24:08.746 [main] INFO  utilities.ReusableMethods - Verifying Teams sections are displayed...
+2025-10-04 22:24:08.772 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 1 is displayed
+2025-10-04 22:24:08.784 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 2 is displayed
+2025-10-04 22:24:08.793 [main] INFO  utilities.ReusableMethods - ✓ Teams Section 3 is displayed
+2025-10-04 22:24:08.802 [main] INFO  utilities.ReusableMethods - ✓ See All Teams Button is displayed
+2025-10-04 22:24:08.802 [main] INFO  utilities.ReusableMethods - Verifying Locations sections are displayed...
+2025-10-04 22:24:11.854 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 1 is displayed
+2025-10-04 22:24:15.075 [main] INFO  utilities.ReusableMethods - ✓ Locations Section 2 is displayed
+2025-10-04 22:24:15.075 [main] INFO  utilities.ReusableMethods - Verifying Life at Insider section is displayed...
+2025-10-04 22:24:15.101 [main] INFO  utilities.ReusableMethods - ✓ Life at Insider Section is displayed
+2025-10-04 22:24:15.101 [main] INFO  tests.InsiderE2ETests - ✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified
+2025-10-04 22:24:15.103 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:24:15.192 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:24:15.193 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:24:28.879 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:24:28.879 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:24:28.884 [main] INFO  tests.InsiderE2ETests - Starting Test 3: Verifying QA jobs filtering
+2025-10-04 22:24:28.884 [main] INFO  utilities.ReusableMethods - Navigating to QA page...
+2025-10-04 22:24:40.095 [main] INFO  utilities.ReusableMethods - ✓ QA page is successfully opened and verified
+2025-10-04 22:24:51.165 [main] INFO  utilities.ReusableMethods - ✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified
+2025-10-04 22:24:51.165 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 22:24:54.241 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 22:25:00.377 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 22:25:06.479 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 22:25:06.479 [main] INFO  utilities.ReusableMethods - Verifying job list is displayed...
+2025-10-04 22:25:09.521 [main] INFO  utilities.ReusableMethods - ✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed
+2025-10-04 22:25:09.521 [main] INFO  tests.InsiderE2ETests - ✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified
+2025-10-04 22:25:09.525 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:25:09.616 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:25:09.617 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:25:24.123 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:25:24.124 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:25:24.129 [main] INFO  tests.InsiderE2ETests - Starting Test 4: Verifying job details
+2025-10-04 22:25:24.130 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 22:25:35.420 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 22:25:35.421 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 22:25:38.497 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 22:25:44.635 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 22:25:50.731 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 22:25:50.732 [main] INFO  utilities.ReusableMethods - Preparing job card for verification...
+2025-10-04 22:25:53.798 [main] INFO  utilities.ReusableMethods - ✓ Job card is displayed and ready for verification
+2025-10-04 22:25:53.798 [main] INFO  utilities.ReusableMethods - Verifying job details content...
+2025-10-04 22:25:53.829 [main] INFO  utilities.ReusableMethods - ✓ Position contains 'Quality Assurance': Software Quality Assurance Engineer
+2025-10-04 22:25:53.829 [main] INFO  utilities.ReusableMethods - ✓ Department contains 'Quality Assurance': Quality Assurance
+2025-10-04 22:25:53.829 [main] INFO  utilities.ReusableMethods - ✓ Location contains 'Istanbul, Turkiye': Istanbul, Turkiye
+2025-10-04 22:25:53.829 [main] INFO  utilities.ReusableMethods - ✓ All job details verified successfully
+2025-10-04 22:25:53.829 [main] INFO  tests.InsiderE2ETests - ✓ Test 4 PASSED: All job details verified successfully
+2025-10-04 22:25:53.830 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:25:53.915 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 22:25:53.917 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 22:26:07.689 [main] INFO  utilities.ReusableMethods - ✓ Cookies accepted
+2025-10-04 22:26:07.690 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 22:26:07.695 [main] INFO  tests.InsiderE2ETests - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 22:26:07.695 [main] INFO  utilities.ReusableMethods - Navigating to All Open Positions page...
+2025-10-04 22:26:19.037 [main] INFO  utilities.ReusableMethods - ✓ All Open Positions page loaded
+2025-10-04 22:26:19.038 [main] INFO  utilities.ReusableMethods - Applying location filter for Istanbul, Turkey...
+2025-10-04 22:26:22.119 [main] INFO  utilities.ReusableMethods - ✓ Existing location filters removed
+2025-10-04 22:26:28.253 [main] INFO  utilities.ReusableMethods - ✓ Location dropdown opened
+2025-10-04 22:26:34.373 [main] INFO  utilities.ReusableMethods - ✓ Istanbul, Turkey location selected
+2025-10-04 22:26:34.373 [main] INFO  utilities.ReusableMethods - Preparing to click View Role button...
+2025-10-04 22:26:37.548 [main] INFO  utilities.ReusableMethods - ✓ Hovered over job card to reveal View Role button
+2025-10-04 22:26:37.588 [main] INFO  utilities.ReusableMethods - ✓ Original window handle saved
+2025-10-04 22:26:40.689 [main] INFO  utilities.ReusableMethods - ✓ View Role button clicked
+2025-10-04 22:26:40.689 [main] INFO  utilities.ReusableMethods - Switching to new window...
+2025-10-04 22:26:50.704 [main] INFO  utilities.ReusableMethods - ✓ Successfully switched to new window
+2025-10-04 22:26:50.705 [main] INFO  utilities.ReusableMethods - Verifying Lever Application page...
+2025-10-04 22:26:50.727 [main] INFO  utilities.ReusableMethods - ✓ Lever Application page URL verification successful
+2025-10-04 22:26:50.749 [main] INFO  utilities.ReusableMethods - ✓ Apply for this job button is displayed and verified
+2025-10-04 22:26:50.749 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 22:26:50.751 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 22:26:50.841 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up

@@ -1,5 +1,7 @@
 package utilities;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +14,8 @@ import java.time.Duration;
 import java.util.Set;
 
 public class ReusableMethods {
+
+    private static final Logger logger = LogManager.getLogger(ReusableMethods.class);
 
     // Basic utility methods
     public static void wait(int seconds) {
@@ -59,9 +63,9 @@ public class ReusableMethods {
     public static void acceptCookies(HomePage homePage) {
         try {
             homePage.acceptAllCookiesButton.click();
-            System.out.println("✓ Cookies accepted");
+            logger.info("✓ Cookies accepted");
         } catch (Exception e) {
-            System.out.println("✓ Cookie banner not present");
+            logger.info("✓ Cookie banner not present");
         }
     }
 
@@ -92,26 +96,26 @@ public class ReusableMethods {
     // Test Case 1: Homepage verification
     public static void verifyInsiderHomePage(HomePage homePage) {
         // Verify page title contains "Insider"
-        System.out.println("Verifying page title contains 'Insider'...");
+        logger.info("Verifying page title contains 'Insider'...");
         assertPageTitle(ConfigReader.getProperty("insider.title"));
-        System.out.println("✓ Page title verification successful");
+        logger.info("✓ Page title verification successful");
 
         // Verify page URL contains "useinsider.com"
-        System.out.println("Verifying page URL contains 'useinsider.com'...");
+        logger.info("Verifying page URL contains 'useinsider.com'...");
         assertPageURL("useinsider.com");
-        System.out.println("✓ Page URL verification successful");
+        logger.info("✓ Page URL verification successful");
 
         // Verify main page elements are displayed
-        System.out.println("Verifying main page elements are displayed...");
+        logger.info("Verifying main page elements are displayed...");
         verifyHomePageElements(homePage);
     }
 
     private static void verifyHomePageElements(HomePage homePage) {
         assertElementDisplayed(homePage.navigationBar, "Navigation Bar");
-        System.out.println("✓ Navigation Bar is displayed");
+        logger.info("✓ Navigation Bar is displayed");
 
         assertElementDisplayed(homePage.companyDropdownMenu, "Company Dropdown Menu");
-        System.out.println("✓ Company Dropdown Menu is displayed");
+        logger.info("✓ Company Dropdown Menu is displayed");
     }
 
     // Test Case 2: Careers page verification
@@ -127,23 +131,22 @@ public class ReusableMethods {
     }
 
     private static void navigateToCareersPage(HomePage homePage) {
-        System.out.println("Navigating to Careers page...");
+        logger.info("Navigating to Careers page...");
         homePage.companyMenu.click();
-        System.out.println("✓ Company menu clicked");
+        logger.info("✓ Company menu clicked");
 
         homePage.Careers.click();
-        System.out.println("✓ Careers menu clicked");
-
+        logger.info("✓ Careers menu clicked");
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
     }
 
     private static void verifyCareersPageDetails() {
-        System.out.println("Verifying Careers page URL and title...");
+        logger.info("Verifying Careers page URL and title...");
         assertPageURL("useinsider.com/careers/");
-        System.out.println("✓ Careers page URL verification successful");
+        logger.info("✓ Careers page URL verification successful");
 
         assertPageTitle(ConfigReader.getProperty("careers.title"));
-        System.out.println("✓ Careers page title verification successful");
+        logger.info("✓ Careers page title verification successful");
     }
 
     private static void verifyCareersPageSections(CareersPage careersPage) {
@@ -153,39 +156,42 @@ public class ReusableMethods {
     }
 
     private static void verifyTeamsSections(CareersPage careersPage) {
-        System.out.println("Verifying Teams sections are displayed...");
+        logger.info("Verifying Teams sections are displayed...");
         scrollToElement(careersPage.teamsSection1);
 
         assertElementDisplayed(careersPage.teamsSection1, "Teams Section 1");
-        System.out.println("✓ Teams Section 1 is displayed");
+        logger.info("✓ Teams Section 1 is displayed");
 
         assertElementDisplayed(careersPage.teamsSection2, "Teams Section 2");
-        System.out.println("✓ Teams Section 2 is displayed");
+        logger.info("✓ Teams Section 2 is displayed");
 
         assertElementDisplayed(careersPage.teamsSection3, "Teams Section 3");
-        System.out.println("✓ Teams Section 3 is displayed");
+        logger.info("✓ Teams Section 3 is displayed");
 
         assertElementDisplayed(careersPage.seeAllTeamsButton, "See All Teams Button");
-        System.out.println("✓ See All Teams Button is displayed");
+        logger.info("✓ See All Teams Button is displayed");
     }
 
     private static void verifyLocationsSections(CareersPage careersPage) {
-        System.out.println("Verifying Locations sections are displayed...");
+        logger.info("Verifying Locations sections are displayed...");
         wait(Integer.parseInt(ConfigReader.getProperty("wait.default")));
+
         scrollToElement(careersPage.locationsSection1);
         assertElementDisplayed(careersPage.locationsSection1, "Locations Section 1");
-        System.out.println("✓ Locations Section 1 is displayed");
+        logger.info("✓ Locations Section 1 is displayed");
 
+        scrollToElement(careersPage.rightSide);
         verifyLocationsSectionAfterClicks(careersPage.locationsSection2, careersPage.rightSide, 3);
         assertElementDisplayed(careersPage.locationsSection2, "Locations Section 2");
-        System.out.println("✓ Locations Section 2 is displayed");
+        logger.info("✓ Locations Section 2 is displayed");
     }
 
     private static void verifyLifeAtInsiderSection(CareersPage careersPage) {
-        System.out.println("Verifying Life at Insider section is displayed...");
+        logger.info("Verifying Life at Insider section is displayed...");
         scrollToElement(careersPage.lifeAtInsiderSection);
+
         assertElementDisplayed(careersPage.lifeAtInsiderSection, "Life at Insider Section");
-        System.out.println("✓ Life at Insider Section is displayed");
+        logger.info("✓ Life at Insider Section is displayed");
     }
 
     // Test Case 3: QA jobs filtering
@@ -204,12 +210,12 @@ public class ReusableMethods {
     }
 
     private static void navigateToQAPage() {
-        System.out.println("Navigating to QA page...");
+        logger.info("Navigating to QA page...");
         Driver.getDriver().get(ConfigReader.getProperty("URL"));
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
         assertPageURL("useinsider.com/careers/quality-assurance/");
         assertPageTitle(ConfigReader.getProperty("qa.page.title"));
-        System.out.println("✓ QA page is successfully opened and verified");
+        logger.info("✓ QA page is successfully opened and verified");
     }
 
     private static void clickSeeAllQAJobsButton(QualityAssurancePage qualityAssurancePage) {
@@ -217,36 +223,36 @@ public class ReusableMethods {
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
         assertPageURL(ConfigReader.getProperty("URL2"));
         assertPageTitle(ConfigReader.getProperty("open.positions.title"));
-        System.out.println("✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified");
+        logger.info("✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified");
     }
 
     private static void applyIstanbulLocationFilter(AllOpenPositionsPage allOpenPositionsPage) {
-        System.out.println("Applying location filter for Istanbul, Turkey...");
+        logger.info("Applying location filter for Istanbul, Turkey...");
         int defaultWait = Integer.parseInt(ConfigReader.getProperty("wait.default"));
 
         wait(defaultWait);
         allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
-        System.out.println("✓ Existing location filters removed");
+        logger.info("✓ Existing location filters removed");
 
         wait(defaultWait);
         allOpenPositionsPage.filterByLocationDropdownMenu.click();
         wait(defaultWait);
         allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        System.out.println("✓ Location dropdown opened");
+        logger.info("✓ Location dropdown opened");
 
         wait(defaultWait);
         scrollToElement(allOpenPositionsPage.istanbulTurkiye);
         wait(defaultWait);
         allOpenPositionsPage.istanbulTurkiye.click();
-        System.out.println("✓ Istanbul, Turkey location selected");
+        logger.info("✓ Istanbul, Turkey location selected");
     }
 
     private static void verifyJobListPresence(AllOpenPositionsPage allOpenPositionsPage) {
-        System.out.println("Verifying job list is displayed...");
+        logger.info("Verifying job list is displayed...");
         scrollToElement(allOpenPositionsPage.jobCard);
         wait(Integer.parseInt(ConfigReader.getProperty("wait.default")));
         assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
-        System.out.println("✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed");
+        logger.info("✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed");
     }
 
     // Test Case 4: Job details verification
@@ -259,24 +265,23 @@ public class ReusableMethods {
     }
 
     private static void navigateToOpenPositionsAndFilter(AllOpenPositionsPage allOpenPositionsPage) {
-        System.out.println("Navigating to All Open Positions page...");
+        logger.info("Navigating to All Open Positions page...");
         Driver.getDriver().get(ConfigReader.getProperty("URL2"));
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
-        System.out.println("✓ All Open Positions page loaded");
+        logger.info("✓ All Open Positions page loaded");
 
         applyIstanbulLocationFilter(allOpenPositionsPage);
 
-        System.out.println("Preparing job card for verification...");
-        int defaultWait = Integer.parseInt(ConfigReader.getProperty("wait.default"));
-        wait(defaultWait);
+        logger.info("Preparing job card for verification...");
+        wait(Integer.parseInt(ConfigReader.getProperty("wait.default")));
         scrollToElement(allOpenPositionsPage.jobCard);
         waitForVisibility(allOpenPositionsPage.jobCard, Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
         assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
-        System.out.println("✓ Job card is displayed and ready for verification");
+        logger.info("✓ Job card is displayed and ready for verification");
     }
 
     private static void verifyJobDetailsContentInternal(AllOpenPositionsPage allOpenPositionsPage) {
-        System.out.println("Verifying job details content...");
+        logger.info("Verifying job details content...");
         String qaDepartment = ConfigReader.getProperty("qa.department");
 
         // Get text content from job details
@@ -287,19 +292,19 @@ public class ReusableMethods {
         // Verify Position contains "Quality Assurance"
         Assert.assertTrue(positionText.contains(qaDepartment),
                 "Position should contain '" + qaDepartment + "'. Actual: " + positionText);
-        System.out.println("✓ Position contains '" + qaDepartment + "': " + positionText);
+        logger.info("✓ Position contains '" + qaDepartment + "': " + positionText);
 
         // Verify Department contains "Quality Assurance"
         Assert.assertTrue(departmentText.contains(qaDepartment),
                 "Department should contain '" + qaDepartment + "'. Actual: " + departmentText);
-        System.out.println("✓ Department contains '" + qaDepartment + "': " + departmentText);
+        logger.info("✓ Department contains '" + qaDepartment + "': " + departmentText);
 
         // Verify Location contains "Istanbul, Turkiye"
         Assert.assertTrue(locationText.contains("Istanbul, Turkiye"),
                 "Location should contain 'Istanbul, Turkiye'. Actual: " + locationText);
-        System.out.println("✓ Location contains 'Istanbul, Turkiye': " + locationText);
+        logger.info("✓ Location contains 'Istanbul, Turkiye': " + locationText);
 
-        System.out.println("✓ All job details verified successfully");
+        logger.info("✓ All job details verified successfully");
     }
 
 
@@ -313,19 +318,18 @@ public class ReusableMethods {
     }
 
     private static void prepareForViewRoleClick(AllOpenPositionsPage allOpenPositionsPage) {
-        System.out.println("Navigating to All Open Positions page...");
+        logger.info("Navigating to All Open Positions page...");
         Driver.getDriver().get(ConfigReader.getProperty("URL2"));
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
-        System.out.println("✓ All Open Positions page loaded");
+        logger.info("✓ All Open Positions page loaded");
 
         applyIstanbulLocationFilter(allOpenPositionsPage);
 
-        System.out.println("Preparing to click View Role button...");
-        int defaultWait = Integer.parseInt(ConfigReader.getProperty("wait.default"));
-        wait(defaultWait);
+        logger.info("Preparing to click View Role button...");
+        wait(Integer.parseInt(ConfigReader.getProperty("wait.default")));
         scrollToElement(allOpenPositionsPage.jobCard);
         hover(allOpenPositionsPage.jobCard);
-        System.out.println("✓ Hovered over job card to reveal View Role button");
+        logger.info("✓ Hovered over job card to reveal View Role button");
 
         waitForClickability(allOpenPositionsPage.viewRoleButton, Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
     }
@@ -333,29 +337,29 @@ public class ReusableMethods {
     private static void clickViewRoleAndVerifyRedirect(AllOpenPositionsPage allOpenPositionsPage, LeverApplicationFormPage leverApplicationFormPage) {
         // Save current window handle
         String originalWindow = Driver.getDriver().getWindowHandle();
-        System.out.println("✓ Original window handle saved");
+        logger.info("✓ Original window handle saved");
 
         // Click View Role button
         wait(Integer.parseInt(ConfigReader.getProperty("wait.default")));
         allOpenPositionsPage.viewRoleButton.click();
-        System.out.println("✓ View Role button clicked");
+        logger.info("✓ View Role button clicked");
 
         // Switch to new window and verify
-        System.out.println("Switching to new window...");
+        logger.info("Switching to new window...");
         switchToNewWindow(originalWindow);
         waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
-        System.out.println("✓ Successfully switched to new window");
+        logger.info("✓ Successfully switched to new window");
 
         // Verify Lever Application page
         verifyLeverApplicationPage(leverApplicationFormPage);
     }
 
     private static void verifyLeverApplicationPage(LeverApplicationFormPage leverApplicationFormPage) {
-        System.out.println("Verifying Lever Application page...");
+        logger.info("Verifying Lever Application page...");
         assertPageURL(ConfigReader.getProperty("lever.url"));
-        System.out.println("✓ Lever Application page URL verification successful");
+        logger.info("✓ Lever Application page URL verification successful");
 
         assertElementDisplayed(leverApplicationFormPage.applyForThisJobButton, "Apply for this job button");
-        System.out.println("✓ Apply for this job button is displayed and verified");
+        logger.info("✓ Apply for this job button is displayed and verified");
     }
 }
