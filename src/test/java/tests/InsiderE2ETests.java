@@ -1,10 +1,5 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import java.time.Duration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,7 +7,10 @@ import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import io.qameta.allure.*;
 
+@Epic("Insider E2E Tests")
+@Feature("Web UI Tests")
 public class InsiderE2ETests {
 
     HomePage homePage;
@@ -23,9 +21,13 @@ public class InsiderE2ETests {
 
     @BeforeMethod
     public void setUp() {
+        initializePageObjects();
         Driver.getDriver().get(ConfigReader.getProperty("BaseURL"));
-        ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.acceptCookiesIfPresent();
+        ReusableMethods.waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
+        ReusableMethods.acceptCookies(homePage);
+    }
+
+    private void initializePageObjects() {
         homePage = new HomePage();
         careersPage = new CareersPage();
         qualityAssurancePage = new QualityAssurancePage();
@@ -33,162 +35,52 @@ public class InsiderE2ETests {
         leverApplicationFormPage = new LeverApplicationFormPage();
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Home Page Verification")
     @Test(description = "Test Case 1: Visit https://useinsider.com/ and check Insider home page is opened or not")
     public void test01_VerifyInsiderHomePageOpened() {
-        // Verify page title contains "Insider"
-        ReusableMethods.assertPageTitle("Insider");
-
-        // Verify page URL contains "useinsider.com"
-        ReusableMethods.assertPageURL("useinsider.com");
-
-        // Verify main page elements are displayed
-        ReusableMethods.assertElementDisplayed(homePage.navigationBar, "Navigation Bar");
-        ReusableMethods.assertElementDisplayed(homePage.pageBody, "Page Body");
-
-        // Verify Company dropdown menu is present
-        ReusableMethods.assertElementDisplayed(homePage.companyDropdownMenu, "Company Dropdown Menu");
+        System.out.println("Starting Test 1: Verifying Insider home page");
+        ReusableMethods.verifyInsiderHomePage(homePage);
         System.out.println("✓ Test 1 PASSED: Insider home page is successfully opened and verified");
     }
 
+    @Severity(SeverityLevel.NORMAL)
+    @Story("Careers Page Verification")
     @Test(description = "Test Case 2: Select the 'Company' menu in the navigation bar, select 'Careers' and check Career page, its Locations, Teams, and Life at Insider blocks are open or not")
     public void test02_VerifyCareersPageAndSections() {
-        // Navigate to Careers page
-        homePage.companyMenu.click();
-        homePage.Careers.click();
-        ReusableMethods.waitForPageToLoad(10);
-
-        // Verify Careers page URL and title
-        ReusableMethods.assertPageURL("useinsider.com/careers/");
-        ReusableMethods.assertPageTitle("Careers");
-
-        // Verify Teams block and sections are displayed
-        ReusableMethods.scrollToElement(careersPage.teamsSection1);
-        ReusableMethods.assertElementDisplayed(careersPage.teamsSection1, "Teams Section 1");
-        ReusableMethods.assertElementDisplayed(careersPage.teamsSection2, "Teams Section 2");
-        ReusableMethods.assertElementDisplayed(careersPage.teamsSection3, "Teams Section 3");
-        ReusableMethods.assertElementDisplayed(careersPage.seeAllTeamsButton, "See All Teams Button");
-
-        // Verify Locations block and sections are displayed
-        ReusableMethods.scrollToElement(careersPage.locationsSection1);
-        ReusableMethods.assertElementDisplayed(careersPage.locationsSection1, "Locations Section 1");
-        ReusableMethods.verifyLocationsSectionAfterClicks(careersPage.locationsSection2, careersPage.rightSide, 3);
-        ReusableMethods.assertElementDisplayed(careersPage.locationsSection2, "Locations Section 2");
-
-        // Verify Life at Insider block is displayed
-        ReusableMethods.scrollToElement(careersPage.lifeAtInsiderSection);
-        ReusableMethods.assertElementDisplayed(careersPage.lifeAtInsiderSection, "Life at Insider Section");
+        System.out.println("Starting Test 2: Verifying Careers page and sections");
+        ReusableMethods.navigateAndVerifyCareersPage(homePage, careersPage);
         System.out.println("✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified");
     }
 
+    @Severity(SeverityLevel.NORMAL)
+    @Story("QA Jobs Filtering")
     @Test(description = "Test Case 3: Go to https://useinsider.com/careers/quality-assurance/, click 'See all QA jobs', filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance', check the presence of the jobs list")
     public void test03_VerifyQAJobsFiltering() {
-
-        // Navigate to Quality Assurance page
-        System.out.println("Navigating to QA page...");
-        Driver.getDriver().get(ConfigReader.getProperty("URL"));
-        ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.assertPageURL("useinsider.com/careers/quality-assurance/");
-        ReusableMethods.assertPageTitle("quality assurance");
-        System.out.println("✓ QA page is successfully opened and verified");
-
-        // Click "See all QA jobs" button
-        qualityAssurancePage.seeAllQAJobsButton.click();
-        ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.assertPageURL(ConfigReader.getProperty("URL2"));
-        ReusableMethods.assertPageTitle("Insider Open Positions | Insider");
-        System.out.println("✓ 'See all QA jobs' button is clicked and All Open Positions page is successfully opened and verified");
-
-        //Filter jobs by Location: 'Istanbul, Turkey', and Department: 'Quality Assurance'
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.istanbulTurkiye.click();
-
-        //Verify the presence of the jobs list
-        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
-        ReusableMethods.wait(3);
-        ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
-        System.out.println("✓ Jobs are successfully filtered by Location: 'Istanbul, Turkey' and Department: 'Quality Assurance' and job list is displayed");
+        System.out.println("Starting Test 3: Verifying QA jobs filtering");
+        ReusableMethods.navigateAndFilterQAJobs(qualityAssurancePage, allOpenPositionsPage);
         System.out.println("✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified");
     }
 
+
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Job Details Verification")
     @Test(description = "Test Case 4: Check that all jobs' Position contains 'Quality Assurance', Department contains 'Quality Assurance', and Location contains 'Istanbul, Turkey'")
     public void test04_VerifyJobDetails() {
-
-        Driver.getDriver().get(ConfigReader.getProperty("URL2"));
-        ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.istanbulTurkiye.click();
-        ReusableMethods.wait(3);
-        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
-        ReusableMethods.waitForVisibility(allOpenPositionsPage.jobCard, 10);
-        ReusableMethods.assertElementDisplayed(allOpenPositionsPage.jobCard, "Job Card");
-
-        // Position kontrolü
-        String positionText = allOpenPositionsPage.position.getText();
-        assert positionText.contains("Quality Assurance") : "Position does not contain 'Quality Assurance'. Actual: " + positionText;
-
-        // Department kontrolü
-        String departmentText = allOpenPositionsPage.department.getText();
-        assert departmentText.contains("Quality Assurance") : "Department does not contain 'Quality Assurance'. Actual: " + departmentText;
-
-        // Location kontrolü
-        String locationText = allOpenPositionsPage.location.getText();
-        assert locationText.contains("Istanbul, Turkiye") : "Location does not contain 'Istanbul, Turkey'. Actual: " + locationText;
-
+        System.out.println("Starting Test 4: Verifying job details");
+        ReusableMethods.verifyJobDetailsContent(allOpenPositionsPage);
         System.out.println("✓ Test 4 PASSED: All job details verified successfully");
     }
 
 
+    @Severity(SeverityLevel.NORMAL)
+    @Story("Application Form Redirect")
     @Test(description = "Test Case 5: Click the 'View Role' button and check that this action redirects us to the Lever Application form page")
     public void test05_VerifyLeverApplicationRedirect() {
-
-        Driver.getDriver().get(ConfigReader.getProperty("URL2"));
-        ReusableMethods.waitForPageToLoad(10);
-
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.removeAllItemsFilterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.filterByLocationDropdownMenu.click();
-        ReusableMethods.wait(3);
-        ReusableMethods.scrollToElement(allOpenPositionsPage.istanbulTurkiye);
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.istanbulTurkiye.click();
-
-        ReusableMethods.wait(3);
-        ReusableMethods.scrollToElement(allOpenPositionsPage.jobCard);
-        ReusableMethods.hover(allOpenPositionsPage.jobCard);
-        ReusableMethods.waitForClickability(allOpenPositionsPage.viewRoleButton, 10);
-
-        // Mevcut pencereyi kaydet
-        String originalWindow = Driver.getDriver().getWindowHandle();
-        ReusableMethods.wait(3);
-        allOpenPositionsPage.viewRoleButton.click();
-        ReusableMethods.switchToNewWindow(originalWindow);
-        ReusableMethods.waitForPageToLoad(10);
-        ReusableMethods.assertPageURL("https://jobs.lever.co/useinsider/");
-
-        // Başvuru butonunun yeni pencerede görüntülendiğini doğrula
-        ReusableMethods.assertElementDisplayed(leverApplicationFormPage.applyForThisJobButton, "Apply for this job button");
+        System.out.println("Starting Test 5: Verifying Lever Application redirect");
+        ReusableMethods.verifyLeverApplicationRedirect(allOpenPositionsPage, leverApplicationFormPage);
         System.out.println("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
     }
-
 
     @AfterMethod
     public void tearDown() {

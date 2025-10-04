@@ -9,23 +9,18 @@ public class HomePage {
 
     public HomePage(){PageFactory.initElements(Driver.getDriver(),this);}
 
-    @FindBy(xpath = "//a[text()='Login']")
-    public WebElement homePageIsOpened;
-
     @FindBy(xpath = "//a[normalize-space(text())='Company']")
     public WebElement companyMenu;
 
     @FindBy(xpath = "//a[text()='Careers']")
     public WebElement Careers;
 
-    // Navigation menu
     @FindBy(xpath = "//nav[contains(@class, 'navbar')]")
     public WebElement navigationBar;
 
-    // Page load verification
-    @FindBy(xpath = "//body")
-    public WebElement pageBody;
-
     @FindBy(xpath = "//a[normalize-space(text())='Company']")
     public WebElement companyDropdownMenu;
+
+    @FindBy(xpath = "//a[@id='wt-cli-accept-all-btn']")
+    public WebElement acceptAllCookiesButton;
 }

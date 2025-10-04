@@ -31,8 +31,8 @@ public class CareersPage {
 
     @FindBy(xpath = "//i[@class='icon-arrow-right location-slider-next ml-4 text-xsmall text-dark']")
     public WebElement rightSide;
-    //3 kez click yap
 
+    // Verify Life at Insider
     @FindBy(xpath = "//h2[text()='Life at Insider']")
     public WebElement lifeAtInsiderSection;
 

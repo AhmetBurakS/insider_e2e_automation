@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/configuration.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/configuration.properties" />
+              <option name="originalContent" value="browser=chrome&#10;BaseURL=https://useinsider.com/&#10;URL=https://useinsider.com/careers/quality-assurance/&#10;URL2=https://useinsider.com/careers/open-positions/?department=qualityassurance&#10;&#10;# Test Data Constants&#10;qa.department=Quality Assurance&#10;istanbul.location=Istanbul, Turkey&#10;insider.title=Insider&#10;careers.title=Careers&#10;qa.page.title=quality assurance&#10;open.positions.title=Insider Open Positions | Insider&#10;lever.url=https://jobs.lever.co/useinsider/&#10;&#10;# Wait Times&#10;wait.default=3&#10;wait.page.load=10" />
+              <option name="updatedContent" value="browser=chrome&#10;BaseURL=https://useinsider.com/&#10;URL=https://useinsider.com/careers/quality-assurance/&#10;URL2=https://useinsider.com/careers/open-positions/?department=qualityassurance&#10;&#10;# Test Data Constants&#10;qa.department=Quality Assurance&#10;istanbul.location=Istanbul, Turkey&#10;insider.title=Insider&#10;careers.title=Careers&#10;qa.page.title=quality assurance&#10;open.positions.title=Insider Open Positions | Insider&#10;lever.url=https://jobs.lever.co/useinsider/&#10;&#10;# Wait Times&#10;wait.default=3&#10;wait.page.load=10" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
