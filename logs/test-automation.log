@@ -1,0 +1,58 @@
+2025-10-04 15:52:53.668 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 15:53:07.265 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 15:53:07.309 [main] INFO  tests.InsiderE2ETests - Starting Test 1: Verifying Insider home page
+2025-10-04 15:53:07.367 [main] INFO  tests.InsiderE2ETests - ✓ Test 1 PASSED: Insider home page is successfully opened and verified
+2025-10-04 15:53:07.374 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 15:53:07.455 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 15:53:07.457 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 15:53:20.181 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 15:53:20.186 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 15:53:36.254 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 15:53:36.348 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 15:53:36.350 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 15:53:49.106 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 15:53:49.111 [main] INFO  tests.InsiderE2ETests - Starting Test 3: Verifying QA jobs filtering
+2025-10-04 15:54:29.301 [main] INFO  tests.InsiderE2ETests - ✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified
+2025-10-04 15:54:29.304 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 15:54:29.398 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 15:54:29.399 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 15:54:42.640 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 15:54:42.643 [main] INFO  tests.InsiderE2ETests - Starting Test 4: Verifying job details
+2025-10-04 15:55:11.917 [main] INFO  tests.InsiderE2ETests - ✓ Test 4 PASSED: All job details verified successfully
+2025-10-04 15:55:11.918 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 15:55:12.000 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 15:55:12.001 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 15:55:24.817 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 15:55:24.821 [main] INFO  tests.InsiderE2ETests - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 15:56:08.195 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 15:56:08.197 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 15:56:08.288 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 16:12:01.876 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 16:12:17.365 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 16:12:17.439 [main] INFO  tests.InsiderE2ETests - Starting Test 1: Verifying Insider home page
+2025-10-04 16:12:17.515 [main] INFO  tests.InsiderE2ETests - ✓ Test 1 PASSED: Insider home page is successfully opened and verified
+2025-10-04 16:12:17.525 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 16:12:17.621 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 16:12:17.624 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 16:12:33.313 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 16:12:33.317 [main] INFO  tests.InsiderE2ETests - Starting Test 2: Verifying Careers page and sections
+2025-10-04 16:12:49.511 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 16:12:49.590 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 16:12:49.592 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 16:13:02.762 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 16:13:02.767 [main] INFO  tests.InsiderE2ETests - Starting Test 3: Verifying QA jobs filtering
+2025-10-04 16:13:42.891 [main] INFO  tests.InsiderE2ETests - ✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified
+2025-10-04 16:13:42.895 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 16:13:42.985 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 16:13:42.986 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 16:13:57.575 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 16:13:57.579 [main] INFO  tests.InsiderE2ETests - Starting Test 4: Verifying job details
+2025-10-04 16:14:26.781 [main] INFO  tests.InsiderE2ETests - ✓ Test 4 PASSED: All job details verified successfully
+2025-10-04 16:14:26.782 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 16:14:26.865 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
+2025-10-04 16:14:26.866 [main] INFO  tests.InsiderE2ETests - Setting up test environment
+2025-10-04 16:14:39.664 [main] INFO  tests.InsiderE2ETests - Test environment setup completed
+2025-10-04 16:14:39.669 [main] INFO  tests.InsiderE2ETests - Starting Test 5: Verifying Lever Application redirect
+2025-10-04 16:15:22.242 [main] INFO  tests.InsiderE2ETests - ✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully
+2025-10-04 16:15:22.243 [main] INFO  tests.InsiderE2ETests - Cleaning up test environment
+2025-10-04 16:15:22.334 [main] INFO  tests.InsiderE2ETests - Test environment cleaned up
