@@ -1,20 +1,24 @@
 package utilities;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigReader {
 
-    private static Properties properties;
+    private static final Properties properties = new Properties();
 
     static {
-        try {
-            properties = new Properties();
-            InputStream stream = ConfigReader.class.getClassLoader()
-                    .getResourceAsStream("configuration.properties");
+        try (InputStream stream = ConfigReader.class.getClassLoader()
+                .getResourceAsStream("configuration.properties")) {
+
+            if (stream == null) {
+                throw new IllegalStateException("configuration.properties dosyası bulunamadı");
+            }
+
             properties.load(stream);
-            stream.close();
-        } catch (Exception e) {
+
+        } catch (IOException e) {
             throw new RuntimeException("Configuration yüklenemedi", e);
         }
     }
