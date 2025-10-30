@@ -23,15 +23,15 @@ public class BaseTest {
     @Step("Test ortamı hazırlanıyor")
     public void setUp() {
         try {
-            logger.info("🚀 Test başlatılıyor...");
+            logger.info("Test başlatılıyor...");
             Driver.getDriver().get(ConfigReader.getProperty("BaseURL"));
-            logger.info("✓ Tarayıcı başlatıldı ve URL açıldı");
+            logger.info("Tarayıcı başlatıldı ve URL açıldı");
             initializePageObjects();
             ReusableMethods.acceptCookies(homePage);
             ReusableMethods.waitForPageToLoad(Integer.parseInt(ConfigReader.getProperty("wait.page.load")));
-            logger.info("✅ Test ortamı hazırlandı");
+            logger.info("Test ortamı hazırlandı");
         } catch (Exception e) {
-            logger.error("❌ Test ortamı hazırlanırken hata: " + e.getMessage());
+            logger.error("Test ortamı hazırlanırken hata: " + e.getMessage());
             try {
                 if (Driver.getDriver() != null) {
                     Driver.closeDriver();
@@ -54,13 +54,13 @@ public class BaseTest {
     @AfterMethod
     @Step("Test ortamı temizleniyor")
     public void tearDown() {
-        logger.info("🧹 Test temizleniyor...");
+        logger.info("Test temizleniyor...");
 
         if (Driver.getDriver() != null) {
             Driver.closeDriver();
             logger.info("✓ Tarayıcı kapatıldı");
         }
 
-        logger.info("✅ Test tamamlandı");
+        logger.info("Test tamamlandı");
     }
 }

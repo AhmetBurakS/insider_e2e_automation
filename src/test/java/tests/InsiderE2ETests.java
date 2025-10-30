@@ -14,7 +14,7 @@ public class InsiderE2ETests extends BaseTest {
     public void test01_VerifyInsiderHomePageOpened() {
         logger.info("Starting Test 1: Verifying Insider home page");
         ReusableMethods.verifyInsiderHomePage(homePage);
-        logger.info("✓ Test 1 PASSED: Insider home page is successfully opened and verified");
+        logger.info("Test 1 PASSED: Insider home page is successfully opened and verified");
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -23,7 +23,7 @@ public class InsiderE2ETests extends BaseTest {
     public void test02_VerifyCareersPageAndSections() {
         logger.info("Starting Test 2: Verifying Careers page and sections");
         ReusableMethods.navigateAndVerifyCareersPage(homePage, careersPage);
-        logger.info("✓ Test 2 PASSED: Careers page and its sections are successfully opened and verified");
+        logger.info("Test 2 PASSED: Careers page and its sections are successfully opened and verified");
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -32,7 +32,7 @@ public class InsiderE2ETests extends BaseTest {
     public void test03_VerifyQAJobsFiltering() {
         logger.info("Starting Test 3: Verifying QA jobs filtering");
         ReusableMethods.navigateAndFilterQAJobs(qualityAssurancePage, allOpenPositionsPage);
-        logger.info("✓ Test 3 PASSED: QA jobs filtering is successfully completed and verified");
+        logger.info("Test 3 PASSED: QA jobs filtering is successfully completed and verified");
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -41,7 +41,7 @@ public class InsiderE2ETests extends BaseTest {
     public void test04_VerifyJobDetails() {
         logger.info("Starting Test 4: Verifying job details");
         ReusableMethods.verifyJobDetailsContent(allOpenPositionsPage);
-        logger.info("✓ Test 4 PASSED: All job details verified successfully");
+        logger.info("Test 4 PASSED: All job details verified successfully");
     }
 
     @Severity(SeverityLevel.CRITICAL)
@@ -50,6 +50,6 @@ public class InsiderE2ETests extends BaseTest {
     public void test05_VerifyLeverApplicationRedirect() {
         logger.info("Starting Test 5: Verifying Lever Application redirect");
         ReusableMethods.verifyLeverApplicationRedirect(allOpenPositionsPage, leverApplicationFormPage);
-        logger.info("✓ Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
+        logger.info("Test 5 PASSED: Redirected to Lever Application form page and verified successfully");
     }
 }

@@ -94,6 +94,10 @@ public class ReusableMethods {
         }
     }
 
+
+    // ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     // Test Case 1: Homepage verification
     public static void verifyInsiderHomePage(HomePage homePage) {
         // Verify page title contains "Insider"
